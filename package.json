@@ -1,0 +1,19 @@
+{
+  "name": "image-viewer",
+  "version": "0.0.1",
+  "description": "Simple image viewer that allows to upload images to AWS S3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnib/image-viewer.git"
+  },
+  "author": "Jonathan Rubin Yaniv",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/johnib/image-viewer/issues"
+  },
+  "homepage": "https://github.com/johnib/image-viewer#readme"
+}

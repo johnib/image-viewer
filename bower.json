@@ -1,0 +1,22 @@
+{
+  "name": "image-viewer",
+  "description": "Simple image viewer that allows to upload images to AWS S3.",
+  "main": "index.js",
+  "authors": [
+    "Jonathan Rubin Yaniv"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "fetch": "^0.11.0"
+  }
+}
