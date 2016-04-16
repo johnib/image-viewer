@@ -1,12 +1,12 @@
 {
   "name": "image-viewer",
-  "description": "Simple image viewer that allows to upload images to AWS S3.",
+  "title": "Simple image viewer that allows to upload images to AWS S3.",
   "main": "index.js",
   "authors": [
     "Jonathan Rubin Yaniv"
   ],
   "license": "Apache-2.0",
-  "homepage": "",
+  "homepage": "https://github.com/johnib/image-viewer",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,7 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "es6-promise": "^3.2.1",
-    "fetch": "^0.11.0"
+    "fetch": "^0.11.0",
+    "lodash": "^4.11.1",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
   }
 }
