@@ -1,6 +1,6 @@
 {
   "name": "image-viewer",
-  "title": "Simple image viewer that allows to upload images to AWS S3.",
+  "description": "",
   "main": "index.js",
   "authors": [
     "Jonathan Rubin Yaniv"
@@ -16,9 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "fetch": "^0.11.0",
-    "lodash": "^4.11.1",
     "bootstrap": "^3.3.6",
-    "jquery": "^2.2.3"
+    "fetch": "^0.11.0",
+    "lodash": "^4.11.1"
   }
 }
