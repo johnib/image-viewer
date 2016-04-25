@@ -5,6 +5,7 @@
 
   require("./bower_components/bootstrap/dist/css/bootstrap.min.css");
   require("fetch");
+
   var grid = require("./Grid");
   var awsUtils = require("./aws");
 
