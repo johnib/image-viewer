@@ -4,12 +4,14 @@
   console.log("Copyright © Jonathan Rubin Yaniv");
 
   require("./bower_components/bootstrap/dist/css/bootstrap.min.css");
+  require("./spinner.css");
   require("fetch");
 
   var grid = require("./Grid");
   var awsUtils = require("./aws");
+  var spinner = document.getElementById("spinner");
 
-  fetch("./photos.json")
+  fetch("./photos")
       .then(function (res) {
         return res.json();
       })
@@ -28,9 +30,13 @@
       return;
     }
 
+    spinner.className = "spinner";
+
     awsUtils.sign_request(file, function (res) {
       awsUtils.upload(file, res.signed_url);
       console.log(res);
     });
+
+    spinner.className = "";
   }
 })();
