@@ -33,10 +33,9 @@
     spinner.className = "spinner";
 
     awsUtils.sign_request(file, function (res) {
-      awsUtils.upload(file, res.signed_url);
-      console.log(res);
+      awsUtils.upload(file, res.signed_url, function () {
+        spinner.className = "";
+      });
     });
-
-    spinner.className = "";
   }
 })();

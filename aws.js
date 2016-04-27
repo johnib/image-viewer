@@ -1,8 +1,14 @@
 "use strict";
 
 function AWSUtils() {
-  function upload(file, signed_url) {
+  function upload(file, signed_url, callback) {
     var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        callback();
+      }
+    };
+
     xhr.open("PUT", signed_url);
     xhr.setRequestHeader("x-amz-acl", "public-read");
     xhr.send(file);
