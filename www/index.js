@@ -3,11 +3,11 @@
 (function () {
   console.log("Copyright © Jonathan Rubin Yaniv");
 
-  require("./bower_components/bootstrap/dist/css/bootstrap.min.css");
+  require("./../bower_components/bootstrap/dist/css/bootstrap.min.css");
   require("./spinner.css");
   require("fetch");
 
-  var grid = require("./Grid");
+  var grid = require("./grid");
   var awsUtils = require("./aws");
   var spinner = document.getElementById("spinner");
 

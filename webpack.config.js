@@ -1,14 +1,16 @@
-/**
- * Created by johni on 16/04/2016.
- */
-var path = require('path');
-var webpack = require('webpack');
+"use strict";
+
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const output = path.resolve("./dist");
 
 module.exports = {
-  context: __dirname,
+  context: path.resolve(`./www`),
   entry: "./index.js",
   output: {
-    path: path.resolve("./dist"),
+    path: output,
     filename: "index.min.js"
   },
   module: {
@@ -16,8 +18,14 @@ module.exports = {
       {test: /\.css$/, loader: "style!css"},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
       {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
-      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream"},
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"}
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
+      }
 
     ]
   },
@@ -26,7 +34,12 @@ module.exports = {
   },
   plugins: [
     new webpack.ResolverPlugin(
-        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
+    ),
+    new CopyWebpackPlugin([{
+        from: 'index-dist.html',
+        to: `${output}/index.html`
+      }]
     )
   ]
 };

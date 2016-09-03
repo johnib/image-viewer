@@ -4,7 +4,8 @@
   "title": "Simple image viewer that allows to upload images to AWS S3.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node_modules/.bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "bootstrap-webpack": "0.0.5",
+    "bower": "^1.7.9",
+    "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
