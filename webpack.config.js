@@ -10,7 +10,7 @@ module.exports = {
   context: path.resolve(`./www`),
   entry: "./index.js",
   output: {
-    path: output,
+    path: `${output}/content`,
     filename: "index.min.js"
   },
   module: {
